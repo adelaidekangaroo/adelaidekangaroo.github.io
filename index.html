@@ -1,12 +1,99 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+<title>README</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-h1 {text-align: center;}
-p {text-align: center;}
-div {text-align: center;}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Container for flexboxes */
+section {
+  display: -webkit-flex;
+  display: flex;
+}
+
+/* Style the navigation menu */
+nav {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background: #ccc;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Style the content */
+article {
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
 </style>
 </head>
- <body>
-   <h1>Hello World<h1>
- </body>
+<body>
+
+<header>
+  <h2>Readme.md</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="#">me</a></li>
+      <li><a href="#">experience</a></li>
+      <li><a href="#">education</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <h1>Sergey Simonov</h1>
+    <p>30 years old. </p>
+    <p>Senior Backend Developer (Java)</p>
+  </article>
+</section>
+
+<footer>
+  <p>Footer</p>
+</footer>
+
+</body>
 </html>
