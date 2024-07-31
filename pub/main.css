@@ -15,7 +15,7 @@ a {
     color:                       #5294e2;
 }
 b{
-    color:                       #6a9e41;
+    color:                       #32CD32;
 }
 .window {
     background:                  #404552;
@@ -61,6 +61,10 @@ b{
 }
 .blink {
     animation:                   blinking 1s infinite;
+}
+.cmd {
+    color:                       #FFFF00;
+    display:                     inline-block;
 }
 @keyframes blinking {
     0% { clear:                  both; }
