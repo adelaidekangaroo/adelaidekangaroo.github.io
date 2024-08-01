@@ -66,8 +66,15 @@ b{
     display:                     inline-block;
 }
 .experience_head {
-    color:                       #00FFFF;
-
+    color:                       #00BFFF;
+}
+.description_sub_head {
+    color:                       #00BFFF;
+    display:                     inline-block;
+}
+.description_separator {
+    color:                       white;
+    display:                     inline-block;
 }
 @keyframes blinking {
     0% { clear:                  both; }
