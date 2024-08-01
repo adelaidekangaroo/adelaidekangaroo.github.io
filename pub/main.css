@@ -15,7 +15,7 @@ a {
     color:                       #5294e2;
 }
 b{
-    color:                       #32CD32;
+    color:                       #9ACD32;
 }
 .window {
     background:                  #404552;
@@ -28,7 +28,6 @@ b{
 }
 .window_header {
     background:                  #2e333f;
-    color:                       #c8cfd8;
     padding:                     7px;
 
 }
@@ -63,8 +62,12 @@ b{
     animation:                   blinking 1s infinite;
 }
 .cmd {
-    color:                       #FFFF00;
+    color:                       #FFD700;
     display:                     inline-block;
+}
+.experience_head {
+    color:                       #00FFFF;
+
 }
 @keyframes blinking {
     0% { clear:                  both; }
