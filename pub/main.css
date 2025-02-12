@@ -78,5 +78,4 @@ b{
 }
 @keyframes blinking {
     0% { clear:                  both; }
-    50%{ color:                  transparent; }
 }
