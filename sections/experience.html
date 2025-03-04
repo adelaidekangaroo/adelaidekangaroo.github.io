@@ -1,0 +1,104 @@
+<section id="experience">
+  <p class="command-line"></p> <div class="cmd">-experience</div>
+
+  <span class="separator_large"></span>
+
+  <div class="experience_head">
+    <ul>
+      <li>... Team Lead / Senior Java Backend Developer </li>
+      <li>... МТС · Full-time </li>
+      <li>... <span id="experienceDuration"></span> · (Aug 2022 - Present) </li>
+      <li>... Saint-Petersburg, Russia · Remote </li>
+    </ul>
+  </div>
+
+  <span class="separator"></span>
+
+  <div class="experience_head">... Product:</div> "МТС Умный дом". Агрегатор умных устройств различных производителей, а также клиент для управления внутренними устройствами МТС. (Aqara, Tuya, Daichi, EKF, Redmond, Polaris, МТС etc). 
+  Cloud-to-cloud, ZigBee & IR connections. <br>
+  <div class="experience_head">... Development methodology:</div> Kanban / Feature Driven Development. <br>
+  <div class="experience_head">... Git strategy:</div> Trunk Based Development. <br>
+  <div class="experience_head">... Architecture:</div> Microservices. <br>
+  <div class="experience_head">... Stack:</div> Java 11/17/21, Spring (Boot, Kafka, WebFlux, Data Mongo, Data JPA), MongoDB, Redis, Postgres, Hibernate, Kafka, RabbitMQ, Docker, Kubernetes, GitLab CI/CD, ELK, Prometheus, OpenTelemetry, REST, jsonRPC, gRPC, MQTT <br>
+  <div class="experience_head">... Main achievements:</div>
+  <ul>
+    <li>1. Исправил множество критичных багов.</li>
+    <li>2. Спроектировал, разработал и довел до продакшена универсальную систему интегрирования новых типов устройств. Тем самым значительно сократил T2M новых устройств.</li>
+    <li>3. Разработал сервис интеграции с облаками производителей (Управление устройствами от имени пользователя) и получения телеметрии от устройств. Реализовал интеграцию с Daichi (Увлажнители, Кондиционеры), EKF (розетки, лампочки, сетевые фильтры).</li>
+    <li>4. Разработал сервис сертификации устройств МТС.</li>
+    <li>5. Разработал сервис взаимодействия с устройствами МТС через MQTT брокер (EMQX).</li>
+    <li>6. Разработал сервис авторизации через МТС WebSSO (OAuth2).</li>
+    <li>7. Разработал API Gateway сервис, вынес на него логику авторизации + обогащения тела ответа текстовками об ошибках бизнес-логики. Тем самым минимизировал затраты на рефакторинг авторизации и на добавление новых ошибок бизнес-логики.</li>
+    <li>8. Разработал сервис управления прошивками видеокамер МТС.</li>
+    <li>9. Разработал сервис создания виртуальных ZigBee устройств, управления ими и имитации срабатывания датчиков. Тем самым значительно упростил тестирование приложения.</li>
+    <li>10. Реализовал функционал подключения и управления ИК-устройствами для интеграции с Tuya.</li>
+    <li>11. Руководил разработкой интеграций по API Умного Дома Яндекса с объединением аккаунтов пользователей в других "умных домах". Значительно сократили T2M новых интеграций.</li>
+    <li>12. Руководил командой из 5 человек. Проводил onboarding, code review, daily, декомпозиции, планирование, 1:1.</li>
+    <li>13. Добавил в проект поддержку трассировки запросов по стандарту OpenTelemetry. Тем самым значительно повысил наблюдаемость системы.</li>
+    <li>14. Участвовал в проектировании новой архитектуры бекенда Умного Дома. В итоге была реализована масштабируемая архитектура C2C интеграций.</li>
+    <li>15. Занимался поддержкой production'а. Разбирал инциденты на проде.</li>
+  </ul>
+
+  <span class="separator_large"></span>
+
+  <div class="experience_head">
+    <ul>
+      <li>... Middle Java Backend Developer </li>
+      <li>... СБЕР · Full-time </li>
+      <li>... 1 yr 2 mos · (Apr 2021 - May 2022) </li>
+      <li>... Saint-Petersburg, Russia · Hybrid </li>
+    </ul>
+  </div>
+
+  <span class="separator"></span>
+
+  <div class="experience_head">... Product:</div> Сервис страхования кредитных карт в "Сбербанк Онлайн". Сервис работает по подписке. <br>
+  <div class="experience_head">... Development methodology:</div> Scrum. <br>
+  <div class="experience_head">... Git strategy:</div> GitFlow. <br>
+  <div class="experience_head">... Architecture:</div> SOA. <br>
+  <div class="experience_head">... Stack:</div> Java 11, Spring (Boot, MVC, Data JPA), Postgres, Hibernate, Kafka, JUnit, Mockito, Maven, Docker, OpenShift, 
+  Jenkins, Grafana, Confluence, Jira <br>
+  <div class="experience_head">... Main achievements:</div>
+  <ul>
+    <li>1. Исправил множество критичных багов.</li>
+    <li>2. Спроектировал и разработал функционал выбора версии страховки и ее дальнейшего оформления (ранее в сервисе была только одна версия страховки). Вследствие чего увеличилась доходность продукта.</li>
+    <li>3. Провел глубокий рефакторинг бизнес-логики бекенда (переписал ~40% кода, заметно увеличил гибкость в интеграции новых бизнес-фич).</li>
+    <li>4. Провел глубокий рефакторинг системы бизнес-мониторинга (провел аудит всех бизнес-метрик, функционал был приведен в более гибкий и удобочитаемый вид).</li>
+    <li>5. Интегрировал продукт с системой аудита.</li>
+    <li>6. Спроектировал и реализовал библиотеку версионирования ресурсов. Библиотека является вспомогательной для BACKEND DRIVEN UI движка Сбера. Библиотека используется многими командами внутри компании.</li>
+    <li>7. Проводил code review PR'ов коллег по команде, а также PR'ов коллег из других команд.</li>
+    <li>8. Проводил грумминг, декомпозиции, дейли.</li>
+    <li>9. Был наставником двух Junior Java Backend разработчиков во время их стажировок.</li>
+  </ul>
+
+  <span class="separator_large"></span>
+
+  <div class="experience_head">
+    <ul>
+      <li>... Java Backend Developer </li>
+      <li>... StroyDocABC · Contract </li>
+      <li>... 1 yr 6 mos · (Sep 2019 - Feb 2021) </li>
+      <li>... Saint-Petersburg, Russia · Remote </li>
+    </ul>
+  </div>
+
+  <span class="separator"></span>
+
+  <div class="experience_head">... Product:</div> CRM - система. Управление информацией о заказах, клиентах и сотрудниках юридической фирмы.
+  Напоминание (по email) об отпусках сотрудников. Уведомление (по email) менеджеров об изменении статуса задачи.
+  <br>
+  <div class="experience_head">... Development methodology:</div> Waterfall. <br>
+  <div class="experience_head">... Git strategy:</div> GitHub Flow. <br>
+  <div class="experience_head">... Architecture:</div> Monolith <br>
+  <div class="experience_head">... Stack:</div> Java 11, Spring (Boot, MVC, Data JPA, Cache), Postgres, Hibernate, JUnit, Mockito, Maven, Docker, Jenkins CI/CD <br>
+  <div class="experience_head">... Main achievements:</div>
+  <ul>
+    <li>1. Коммуницировал с заказчиком, сформировал ТЗ по потребностям заказчика.</li>
+    <li>2. Спроектировал схему БД, бизнес-модель данных и все API контракты.</li>
+    <li>3. Разработал всю backend-часть с нуля до релиза в production.</li>
+    <li>4. Реализовал CI/CD посредством Jenkins.</li>
+    <li>5. Консультировал front-end разработчика.</li>
+    <li>6. Сопровождал production, разбирал инциденты.</li>
+    <li>7. В итоге передал заказчику работоспособное приложение, повысившее производительность его организации.</li>
+  </ul>
+</section>
