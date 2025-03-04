@@ -21,30 +21,3 @@ document.addEventListener("DOMContentLoaded", function() {
         el.textContent = experienceText;
     });
 });
-
-document.addEventListener("DOMContentLoaded", function() {
-    const sections = [
-        "aboutme",
-        "contacts",
-        "location",
-        "experience",
-        "education",
-        "publications",
-        "languages",
-        "certifications",
-        "petprojects"
-        ];
-
-    const container = document.getElementById("sections-container");
-
-    sections.forEach(section => {
-        fetch(`sections/${section}.html`)
-        .then(response => response.text())
-        .then(html => {
-            const div = document.createElement("div");
-            div.innerHTML = html;
-            container.appendChild(div);
-        })
-        .catch(error => console.error(`Ошибка загрузки ${section}:`, error));
-    });
-});
