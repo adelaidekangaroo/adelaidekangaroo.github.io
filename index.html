@@ -4,279 +4,251 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="pub/main.css">
-    <link rel="stylesheet" type="text/css" href="pub/media.css">
-    <script src="pub/script.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="script.js" defer></script>
     <title>cv / Sergey Simonov</title> 
 </head>
 <body>
-<div class="window">
-    <div class="window_header">
-        <div class="window_title">~ cv</div>
-        <div class="window_close_button"></div>
-        <div class="window_maximize_button"></div>
-        <div class="window_minimize_button"></div>
-    </div>
-    <div class="window_content ">
-        <b>horoshoznaet@lasthost ~ $</b> readme cv
-        <div class="cmd">-help</div>
-        <br>
-        <header>
-            <nav>
-                - <a href="#aboutme">aboutme</a> <br>
-                - <a href="#contacts">contacts</a> <br>
-                - <a href="#location">location</a> <br>
-                - <a href="#experience">experience</a> <br>
-                - <a href="#education">education</a> <br>
-                - <a href="#publications">publications</a> <br>
-                - <a href="#languages">languages</a> <br>
-                - <a href="#certifications">certifications</a> <br>
-                - <a href="#petprojects">petprojects</a> <br>
-            </nav>
-        </header>
-
-        <b>horoshoznaet@lasthost ~ $</b> readme cv <div class="cmd" id="aboutme">-aboutme</div>
-        <br>
-        ... Сергей Симонов. <br>
-        ... Team Lead / Senior Backend Developer фешемебельных highload applications. <br>
-        ... Не готов к переезду / Не готов к аутстаффу. <br>
-        ... Только удаленный формат работы / Только аккредитованные IT-компании / Только full-time. <br>
-        ... 5+ лет коммерческого опыта backend разработки. <br>
-        ... 1 год опыта в роли Team lead. <br>
-        ... 8+ лет исследования Java. <br>
-        ... Адепт SOA. <br>
-        ... Защитник SOLID. <br>
-        ... Свидетель рефакторинга. <br>
-        ... Заклинатель Spring'a. <br>
-        ... Укротитель Legacy. <br>
-        ... Участник крестового похода из mongo в postgres. <br>
-
-        <b>horoshoznaet@lasthost ~ $</b> readme cv
-        <div class="cmd" id="contacts">-contacts</div>
-        <br>
-        ... <a href="https://t.me/horosho_znaet_bolota">telegram</a> <br>
-        ... <a href="https://www.linkedin.com/in/sergey-simonov-81b576245">linkedin</a> <br>
-        ... astkangaroo@gmail.com <br>
-        ... <a href="https://github.com/adelaidekangaroo">github</a> <br>
-
-        <b>horoshoznaet@lasthost ~ $</b> readme cv
-        <div class="cmd" id="location">-location</div>
-        <br>
-        ... Saint-Petersburg, Russia <br>
-
-        <b>horoshoznaet@lasthost ~ $</b> readme cv
-        <div class="cmd" id="experience">-experience</div>
-        <br>
-        ----------------------------------------- <br>
-        ----------------------------------------- <br>
-        <div class="experience_head">
-            ... Team Lead / Senior Java Backend Developer <br>
-            ... МТС · Full-time <br>
-            <p id="difference"></p>
-            ... Saint-Petersburg, Russia · Remote <br>
+    <div class="window">
+        <div class="window_header">
+            <div class="window_title">~ cv</div>
+            <div class="window_controls">
+                <div class="window_close_button"></div>
+                <div class="window_maximize_button"></div>
+                <div class="window_minimize_button"></div>
+            </div>
         </div>
-        ----------------------------------------- <br>
-        ...
-        <div class="description_sub_head">Product:</div>
-        "МТС Умный дом". Агрегатор умных устройств различных производителей, а также клиент для 
-        управления внутренними устройствами МТС. (Aqara, Tuya, Daichi, EKF, Redmond, Polaris, МТС etc). 
-        Cloud-to-cloud, ZigBee & IR connections. <br>
-        ...
-        <div class="description_sub_head">Development methodology:</div>
-        Kanban / Feature Driven Development. <br>
-        ...
-        <div class="description_sub_head">Git strategy:</div>
-        Trunk Based Development. <br>
-        ...
-        <div class="description_sub_head">Architecture:</div>
-        Microservices. <br>
-        ...
-        <div class="description_sub_head">Stack:</div>
-        Java 11/17/21, Spring (Boot, Kafka, WebFlux, Data Mongo, Data JPA), MongoDB, Redis, Postgres, Hibernate, Kafka, 
-        RabbitMQ, Docker, Kubernetes, GitLab CI/CD, ELK, Prometheus, OpenTelemetry, REST, jsonRPC, gRPC, MQTT <br>
-        ...
-        <div class="description_sub_head">Main achievements:</div>
-        <br>
-        1. Исправил множество критичных багов. <br>
-        2. Спроектировал, разработал и довел до продакшена универсальную систему интегрирования новый типов устройств. 
-        Тем самым значительно сократил T2M новых устройств. <br>
-        3. Разработал сервис интеграции с облаками производителей (Управление устройствами от имени пользователя) и
-        получения телеметрии от устройств. Реализовал интеграцию с Daichi (Увлажнители, Кондиционеры), EKF (розетки,
-        лампочки, сетевые фильтры). <br>
-        4. Разработал сервис сертификации устройств МТС. <br>
-        5. Разработал сервис взаимодействия с устройствами МТС через MQTT брокер (EMQX). <br>
-        6. Разработал сервис авторизации через МТС WebSSO (OAuth2). <br>
-        7. Разработал API Gateway сервис, вынес на него логику авторизации + обогащения тел ответа 
-        текстовками об ошибках бизнес логики. Тем самым минимизировал затраты на рефакторинг авторизации и на добавление 
-        новых ошибок бизнес логики. <br>
-        8. Разработал сервис управления прошивками видеокамер МТС. <br>
-        9. Разработал сервис создания виртуальных ZigBee устройств, управления ими и имитации срабатывания
-        датчиков. Тем самым значительно упростил тестирование приложения. <br>
-        10. Реализовал функционал подключения и управления ИК-устройствами для интеграции с Tuya. <br>
-        11. Руководил разработкой интеграций по API Умного Дома Яндекса с объединением аккаунтов пользователей в других
-        "умных домах". Значительно сократили T2M новых интеграций. <br>
-        12. Руководил командой из 5 человек. Проводил onboarding, code review, daily, декомпозиции, планирование, 1:1.
-        <br>
-        13. Добавил в проект поддержку трассировки запросов по стандарту OpenTelemetry. Тем самым значительно повысил наблюдаемость
-        системы. <br>
-        14. Участвовал в проектировании новой архитектуры бекенда Умного Дома. В итоге была реализована масштабируемая
-        архитектура C2C интеграций. <br>
-        15. Занимался поддержкой production'а. Разбирал инциденты на проде. <br>
-        ----------------------------------------- <br>
-        ----------------------------------------- <br>
+        <div class="window_content ">
+            <p class="command-line"></p> <div class="cmd">-help</div>
+            <header>
+                <nav>
+                    - <a href="#aboutme">aboutme</a> 
+                    - <a href="#contacts">contacts</a> 
+                    - <a href="#location">location</a> 
+                    - <a href="#experience">experience</a> 
+                    - <a href="#education">education</a> 
+                    - <a href="#publications">publications</a> 
+                    - <a href="#languages">languages</a> 
+                    - <a href="#certifications">certifications</a> 
+                    - <a href="#petprojects">petprojects</a> 
+                </nav>
+            </header>
+
+            <section id="aboutme">
+                <p class="command-line"></p> <div class="cmd">-aboutme</div>
+                <ul>
+                  <li>... Сергей Симонов. </li>
+                  <li>... Team Lead / Senior Backend Developer фешемебельных highload applications. </li>
+                  <li>... Не готов к переезду / Не готов к аутстаффу. </li>
+                  <li>... Только удаленный формат работы / Только аккредитованные IT-компании / Только full-time. </li>
+                  <li>... 5+ лет коммерческого опыта backend разработки. </li>
+                  <li>... 1 год опыта в роли Team lead. </li>
+                  <li>... 8+ лет исследования Java. </li>
+                  <li>... Адепт SOA. </li>
+                  <li>... Защитник SOLID. </li>
+                  <li>... Свидетель рефакторинга. </li>
+                  <li>... Заклинатель Spring'a. </li>
+                  <li>... Укротитель Legacy. </li>
+                  <li>... Участник крестового похода из mongo в postgres. </li>
+              </ul>
+          </section>
+
+          <section id="contacts">
+              <p class="command-line"></p> <div class="cmd">-contacts</div>
+              <ul>
+                  <li>... <a href="https://t.me/horosho_znaet_bolota">telegram</a> </li>
+                  <li>... <a href="https://www.linkedin.com/in/sergey-simonov-81b576245">linkedin</a> </li>
+                  <li>... astkangaroo@gmail.com </li>
+                  <li>... <a href="https://github.com/adelaidekangaroo">github</a> </li>
+              </ul>
+          </section>
+
+          <section id="location">
+              <p class="command-line"></p> <div class="cmd">-location</div> <br>
+              ... Saint-Petersburg, Russia 
+          </section>
+
+          <section id="experience">
+              <p class="command-line"></p> <div class="cmd">-experience</div>
+
+              <span class="separator_large"></span>
+
+              <div class="experience_head">
+                <ul>
+                  <li>... Team Lead / Senior Java Backend Developer </li>
+                  <li>... МТС · Full-time </li>
+                  <li>... <span id="experienceDuration"></span> · (Aug 2022 - Present) </li>
+                  <li>... Saint-Petersburg, Russia · Remote </li>
+              </ul>
+          </div>
+
+          <span class="separator"></span>
+
+          <div class="experience_head">... Product:</div> "МТС Умный дом". Агрегатор умных устройств различных производителей, а также клиент для управления внутренними устройствами МТС. (Aqara, Tuya, Daichi, EKF, Redmond, Polaris, МТС etc). 
+          Cloud-to-cloud, ZigBee & IR connections. <br>
+          <div class="experience_head">... Development methodology:</div> Kanban / Feature Driven Development. <br>
+          <div class="experience_head">... Git strategy:</div> Trunk Based Development. <br>
+          <div class="experience_head">... Architecture:</div> Microservices. <br>
+          <div class="experience_head">... Stack:</div> Java 11/17/21, Spring (Boot, Kafka, WebFlux, Data Mongo, Data JPA), MongoDB, Redis, Postgres, Hibernate, Kafka, RabbitMQ, Docker, Kubernetes, GitLab CI/CD, ELK, Prometheus, OpenTelemetry, REST, jsonRPC, gRPC, MQTT <br>
+          <div class="experience_head">... Main achievements:</div>
+          <ul>
+            <li>1. Исправил множество критичных багов.</li>
+            <li>2. Спроектировал, разработал и довел до продакшена универсальную систему интегрирования новых типов устройств. Тем самым значительно сократил T2M новых устройств.</li>
+            <li>3. Разработал сервис интеграции с облаками производителей (Управление устройствами от имени пользователя) и получения телеметрии от устройств. Реализовал интеграцию с Daichi (Увлажнители, Кондиционеры), EKF (розетки, лампочки, сетевые фильтры).</li>
+            <li>4. Разработал сервис сертификации устройств МТС.</li>
+            <li>5. Разработал сервис взаимодействия с устройствами МТС через MQTT брокер (EMQX).</li>
+            <li>6. Разработал сервис авторизации через МТС WebSSO (OAuth2).</li>
+            <li>7. Разработал API Gateway сервис, вынес на него логику авторизации + обогащения тела ответа текстовками об ошибках бизнес-логики. Тем самым минимизировал затраты на рефакторинг авторизации и на добавление новых ошибок бизнес-логики.</li>
+            <li>8. Разработал сервис управления прошивками видеокамер МТС.</li>
+            <li>9. Разработал сервис создания виртуальных ZigBee устройств, управления ими и имитации срабатывания датчиков. Тем самым значительно упростил тестирование приложения.</li>
+            <li>10. Реализовал функционал подключения и управления ИК-устройствами для интеграции с Tuya.</li>
+            <li>11. Руководил разработкой интеграций по API Умного Дома Яндекса с объединением аккаунтов пользователей в других "умных домах". Значительно сократили T2M новых интеграций.</li>
+            <li>12. Руководил командой из 5 человек. Проводил onboarding, code review, daily, декомпозиции, планирование, 1:1.</li>
+            <li>13. Добавил в проект поддержку трассировки запросов по стандарту OpenTelemetry. Тем самым значительно повысил наблюдаемость системы.</li>
+            <li>14. Участвовал в проектировании новой архитектуры бекенда Умного Дома. В итоге была реализована масштабируемая архитектура C2C интеграций.</li>
+            <li>15. Занимался поддержкой production'а. Разбирал инциденты на проде.</li>
+        </ul>
+
+        <span class="separator_large"></span>
+
         <div class="experience_head">
-            ... Middle Java Backend Developer <br>
-            ... СБЕР · Full-time <br>
-            ... 1 yr 2 mos · (Apr 2021 - May 2022) <br>
-            ... Saint-Petersburg, Russia · Hybrid <br>
-        </div>
-        ----------------------------------------- <br>
-        ...
-        <div class="description_sub_head">Product:</div>
-        Сервис страхования кредитных карт в "Сбербанк Онлайн". Сервис работает по подписке. <br>
-        ...
-        <div class="description_sub_head">Development methodology:</div>
-        Scrum. <br>
-        ...
-        <div class="description_sub_head">Git strategy:</div>
-        GitFlow. <br>
-        ...
-        <div class="description_sub_head">Architecture:</div>
-        SOA. <br>
-        ...
-        <div class="description_sub_head">Stack:</div>
-        Java 11, Spring (Boot, MVC, Data JPA), Postgres, Hibernate, Kafka, JUnit, Mockito, Maven, Docker, OpenShift, 
-        Jenkins, Grafana, Confluence, Jira <br>
-        ...
-        <div class="description_sub_head">Main achievements:</div>
-        <br>
-        1. Исправил множество критичных багов. <br>
-        2. Спроектировал и разработал функционал выбора версии страховки и ее дальнейшего оформления (ранее в сервисе
-        была только одна версия страховки). В следствии чего увеличилась доходность продукта. <br>
-        3. Провел глубокий рефакторинг бизнес логики бекенда (переписал ~40% кода, заметно увеличил гибкость в
-        интеграции новых бизнес фич). <br>
-        4. Провел глубокий рефакторинг системы бизнес мониторинга (провел аудит всех бизнес метрик, функционал был
-        приведен в более гибкий и удобочитаемый вид). <br>
-        5. Интегрировал продукт с системой аудита. <br>
-        6. Спроектировал и реализовал библиотеку версионирования ресурсов. Библиотека является вспомогательной для
-        BACKEND DRIVEN UI движка Сбера. Библиотека используется многими командами внутри компании. <br>
-        7. Проводил code review PR'ов коллег по команде, а также PR'ов коллег из других команд. <br>
-        8. Проводил грумминг, декомпозиции, дейли. <br>
-        9. Был наставником двух Junior Java Backend разработчиков во время их стажировок. <br>
-        ----------------------------------------- <br>
-        ----------------------------------------- <br>
-        <div class="experience_head">
-            ... Java Backend Developer <br>
-            ... StroyDocABC · Contract <br>
-            ... 1 yr 6 mos · (Sep 2019 - Feb 2021) <br>
-            ... Saint-Petersburg, Russia · Remote <br>
-        </div>
-        ----------------------------------------- <br>
-        ...
-        <div class="description_sub_head">Product:</div>
-        CRM - система. Управление информацией о заказах, клиентах и сотрудниках юридической фирмы.
-        Напоминание (по email) об отпусках сотрудников. Уведомление (по email) менеджеров об изменении статуса задачи.
-        <br>
-        ...
-        <div class="description_sub_head">Development methodology:</div>
-        Waterfall. <br>
-        ...
-        <div class="description_sub_head">Git strategy:</div>
-        GitHub Flow. <br>
-        ...
-        <div class="description_sub_head">Architecture:</div>
-        Monolith <br>
-        ...
-        <div class="description_sub_head">Stack:</div>
-        Java 11, Spring (Boot, MVC, Data JPA, Cache), Postgres, Hibernate, JUnit, Mockito, Maven, Docker,
-        Jenkins CI/CD <br>
-        ...
-        <div class="description_sub_head">Main achievements:</div>
-        <br>
-        1. Коммуницировал с заказчиком, сформировал ТЗ по потребностям заказчика. <br>
-        2. Спроектировал схему БД, бизнес модель данных и все API контракты. <br>
-        3. Разработал всю backend часть с нуля до релиза в production. <br>
-        4. Реализовал CI/CD по средством Jenkins. <br>
-        5. Консультировал front-end разработчика. <br>
-        6. Сопровождал production, разбирал инциденты. <br>
-        7. В итоге передал заказчику работоспособное приложение, повысившее производительность его организации. <br>
+            <ul>
+              <li>... Middle Java Backend Developer </li>
+              <li>... СБЕР · Full-time </li>
+              <li>... 1 yr 2 mos · (Apr 2021 - May 2022) </li>
+              <li>... Saint-Petersburg, Russia · Hybrid </li>
+          </ul>
+      </div>
 
-        <b id="top">horoshoznaet@lasthost ~ $</b> readme cv
-        <div class="cmd" id="education">-education</div>
-        <br>
+      <span class="separator"></span>
 
-        ... Saint Petersburg State University of Aerospace and Instrumentation <br>
-        ... Specialty: Computer Science and Engineering, Bachelor <br>
-        ... Graduation year: 2020 <br>
-        ... Grade: 4.67 <br>
+      <div class="experience_head">... Product:</div> Сервис страхования кредитных карт в "Сбербанк Онлайн". Сервис работает по подписке. <br>
+      <div class="experience_head">... Development methodology:</div> Scrum. <br>
+      <div class="experience_head">... Git strategy:</div> GitFlow. <br>
+      <div class="experience_head">... Architecture:</div> SOA. <br>
+      <div class="experience_head">... Stack:</div> Java 11, Spring (Boot, MVC, Data JPA), Postgres, Hibernate, Kafka, JUnit, Mockito, Maven, Docker, OpenShift, 
+      Jenkins, Grafana, Confluence, Jira <br>
+      <div class="experience_head">... Main achievements:</div>
+      <ul>
+        <li>1. Исправил множество критичных багов.</li>
+        <li>2. Спроектировал и разработал функционал выбора версии страховки и ее дальнейшего оформления (ранее в сервисе была только одна версия страховки). Вследствие чего увеличилась доходность продукта.</li>
+        <li>3. Провел глубокий рефакторинг бизнес-логики бекенда (переписал ~40% кода, заметно увеличил гибкость в интеграции новых бизнес-фич).</li>
+        <li>4. Провел глубокий рефакторинг системы бизнес-мониторинга (провел аудит всех бизнес-метрик, функционал был приведен в более гибкий и удобочитаемый вид).</li>
+        <li>5. Интегрировал продукт с системой аудита.</li>
+        <li>6. Спроектировал и реализовал библиотеку версионирования ресурсов. Библиотека является вспомогательной для BACKEND DRIVEN UI движка Сбера. Библиотека используется многими командами внутри компании.</li>
+        <li>7. Проводил code review PR'ов коллег по команде, а также PR'ов коллег из других команд.</li>
+        <li>8. Проводил грумминг, декомпозиции, дейли.</li>
+        <li>9. Был наставником двух Junior Java Backend разработчиков во время их стажировок.</li>
+    </ul>
 
-        <b>horoshoznaet@lasthost ~ $</b> readme cv
-        <div class="cmd" id="publications">-publications</div>
-        <br>
+    <span class="separator_large"></span>
 
-        ... 'The Socket and ServerSocket classes, or “Hello, server? Can you hear me?"' <br>
-        ... JavaRush · May 8, 2018 <br>
-        ... <a
-            href="https://javarush.com/groups/posts/654-klassih-socket-i-serversocket-ili-allo-server-tih-menja-slihshishjh">link</a>
-        <br>
-        ... ~ 200K views <br>
+    <div class="experience_head">
+        <ul>
+          <li>... Java Backend Developer </li>
+          <li>... StroyDocABC · Contract </li>
+          <li>... 1 yr 6 mos · (Sep 2019 - Feb 2021) </li>
+          <li>... Saint-Petersburg, Russia · Remote </li>
+      </ul>
+  </div>
 
-        <b>horoshoznaet@lasthost ~ $</b> readme cv
-        <div class="cmd" id="languages">-languages</div>
-        <br>
+  <span class="separator"></span>
 
-        ... English - Limited working proficiency <br>
-        ... Русский - Native <br>
+  <div class="experience_head">... Product:</div> CRM - система. Управление информацией о заказах, клиентах и сотрудниках юридической фирмы.
+  Напоминание (по email) об отпусках сотрудников. Уведомление (по email) менеджеров об изменении статуса задачи.
+  <br>
+  <div class="experience_head">... Development methodology:</div> Waterfall. <br>
+  <div class="experience_head">... Git strategy:</div> GitHub Flow. <br>
+  <div class="experience_head">... Architecture:</div> Monolith <br>
+  <div class="experience_head">... Stack:</div> Java 11, Spring (Boot, MVC, Data JPA, Cache), Postgres, Hibernate, JUnit, Mockito, Maven, Docker, Jenkins CI/CD <br>
+  <div class="experience_head">... Main achievements:</div>
+  <ul>
+    <li>1. Коммуницировал с заказчиком, сформировал ТЗ по потребностям заказчика.</li>
+    <li>2. Спроектировал схему БД, бизнес-модель данных и все API контракты.</li>
+    <li>3. Разработал всю backend-часть с нуля до релиза в production.</li>
+    <li>4. Реализовал CI/CD посредством Jenkins.</li>
+    <li>5. Консультировал front-end разработчика.</li>
+    <li>6. Сопровождал production, разбирал инциденты.</li>
+    <li>7. В итоге передал заказчику работоспособное приложение, повысившее производительность его организации.</li>
+</ul>
+</section>
 
-        <b>horoshoznaet@lasthost ~ $</b> readme cv
-        <div class="cmd" id="certifications">-certifications</div>
-        <br>
-        ----------------------------------------- <br>
-        ----------------------------------------- <br>
-        ... Agile Software Engineering Course (5.0) <br>
-        ... <a href="https://community.scaledagile.com/">https://community.scaledagile.com</a> <br>
-        ... Issued: Apr 2024 <br>
-        ... Credential ID: 27734400-7264 <br>
-        ... <a
+<section id="education">
+    <p class="command-line"></p> <div class="cmd">-education</div>
+    <ul>
+        <li>... Saint Petersburg State University of Aerospace and Instrumentation </li>
+        <li>... Specialty: Computer Science and Engineering, Bachelor </li>
+        <li>... Graduation year: 2020 </li>
+        <li>... Grade: 4.67 </li>
+    </ul>
+</section>
+
+<section id="publications">
+    <p class="command-line"></p> <div class="cmd">-publications</div>
+    <ul>
+        <li>... 'The Socket and ServerSocket classes, or “Hello, server? Can you hear me?"' </li>
+        <li>... JavaRush · May 8, 2018 </li>
+        <li>... <a href="https://javarush.com/groups/posts/654-klassih-socket-i-serversocket-ili-allo-server-tih-menja-slihshishjh">link</a> </li>
+        <li>... 200K+ views </li>
+    </ul>
+</section>
+
+<section id="publications">
+    <p class="command-line"></p> <div class="cmd">-languages</div>
+    <ul>
+        <li>... English - Limited working proficiency </li>
+        <li>... Русский - Native </li>
+    </ul>
+</section>
+
+<section id="certifications">
+    <p class="command-line"></p> <div class="cmd">-certifications</div>
+    <span class="separator_large"></span>
+    <ul>
+        <li>... Agile Software Engineering Course (5.0) </li>
+        <li>... <a href="https://community.scaledagile.com/">https://community.scaledagile.com</a> </li>
+        <li>... Issued: Apr 2024 </li>
+        <li>... Credential ID: 27734400-7264 </li>
+        <li>... <a
             href="https://community.scaledagile.com/apex/PrintAchievement?aid=a0t0W00000DYfnrQAD&aaid=a0rQo00000qaOSrIAM">link</a>
-        <br>
-        ----------------------------------------- <br>
-        ----------------------------------------- <br>
-        ... Java Enterprise Development Internship Certificate <br>
-        ... <a href="https://javaops.ru">https://javaops.ru</a> <br>
-        ... Issued: Dec 2018 <br>
-        ... <a href="https://javaops.ru/certificate/topjava?lang=en&email=izotopraspadov@gmail.com">link</a> <br>
+        </li>
+    </ul>
+    <span class="separator_large"></span>
+    <ul>
+        <li>... Java Enterprise Development Internship Certificate </li>
+        <li>... <a href="https://javaops.ru">https://javaops.ru</a> </li>
+        <li>... Issued: Dec 2018 </li>
+        <li>... <a href="https://javaops.ru/certificate/topjava?lang=en&email=izotopraspadov@gmail.com">link</a> </li>
+    </ul>
+</section>
 
-        <b>horoshoznaet@lasthost ~ $</b> readme cv
-        <div class="cmd" id="petprojects">-petprojects</div>
-        <br>
-        ----------------------------------------- <br>
-        ----------------------------------------- <br>
-        ... Wiizengamot (android app) <br>
-        ... <a
-            href="https://github.com/adelaidekangaroo/Wiizengamot">github</a>
-        <br>
-        ... Android приложение для просмотра фотографий с сервиса  <a href="https://unsplash.com/">unsplash.com</a>. Можно просматривать
-        последние загруженные фото. Искать фото по ключевым словам. Просматривать фото в детальных карточках или в webview.
-        Используя toggle на главном экране можно подписаться на уведомления о новых загруженных фото. <br>
-        ----------------------------------------- <br>
-        ----------------------------------------- <br>
-        ... Pie (compiler) <br>
-        ... <a href="https://github.com/adelaidekangaroo/Pie">github</a> <br>
-        ... Полноценный компилятор простого псевдо языка, состоящего из нескольких правил. <br>
-        ----------------------------------------- <br>
-        ----------------------------------------- <br>
-        ... Talk (multithreading console chat) <br>
-        ... <a href="https://github.com/adelaidekangaroo/Talk">github</a> <br>
-        ... Многопользовательский консольный чат. По данному проекту я написал статью на <a
-            href="https://javarush.com/groups/posts/654-klassih-socket-i-serversocket-ili-allo-server-tih-menja-slihshishjh">
-            javarush</a> (почти 200K просмотров) <br>
-
-        <b>horoshoznaet@lasthost ~ $</b> <br>
-        <b>horoshoznaet@lasthost ~ $</b> <br>
-        <b>horoshoznaet@lasthost ~ $</b> <span class="blink">_</span>
-
-    </div>
+<section id="petprojects">
+    <p class="command-line"></p> <div class="cmd">-petprojects</div>
+    <span class="separator_large"></span>
+    <ul>
+        <li>... Wiizengamot (android app) </li>
+        <li>... <a href="https://github.com/adelaidekangaroo/Wiizengamot">github</a> </li>
+        <li>... Android приложение для просмотра фотографий с сервиса  <a href="https://unsplash.com/">unsplash.com</a>. Можно просматривать последние загруженные фото. Искать фото по ключевым словам. Просматривать фото в детальных карточках или в webview. Используя toggle на главном экране можно подписаться на уведомления о новых загруженных фото. 
+        </li>
+    </ul>
+    <span class="separator_large"></span>
+    <ul>
+        <li>... Pie (compiler) </li>
+        <li>... <a href="https://github.com/adelaidekangaroo/Pie">github</a> </li>
+        <li>... Полноценный компилятор простого псевдо языка, состоящего из нескольких правил. </li>
+    </ul>
+    <span class="separator_large"></span>
+    <ul>
+        <li>... Talk (multithreading console chat) </li>
+        <li>... <a href="https://github.com/adelaidekangaroo/Talk">github</a> </li>
+        <li>... Многопользовательский консольный чат. По данному проекту я написал статью на <a href="https://javarush.com/groups/posts/654-klassih-socket-i-serversocket-ili-allo-server-tih-menja-slihshishjh"> javarush</a> (200K+ views) 
+        </li>
+    </ul>
+</section>
+<b>horoshoznaet@lasthost ~ $</b> <br>
+<b>horoshoznaet@lasthost ~ $</b> <br>
+<b>horoshoznaet@lasthost ~ $</b> <span class="blink">_</span>
+</div>
 </div>
 </body>
 </html>
