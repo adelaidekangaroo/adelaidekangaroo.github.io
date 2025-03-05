@@ -7,7 +7,7 @@ body {
     font-family: monospace;
     font-size: 14px;
     color: #c8cfd8;
-    background: #2e2e2e;
+    background: #292723;
     padding-top: 60px;
     line-height: 1.3em;
     text-align: center;
@@ -120,9 +120,5 @@ b {
 }
 .highlight { 
     color: #00BFFF;
-    display: inline-block;
-}
-.highlight_sub { 
-    color: #29d9b6;
     display: inline-block;
 }
