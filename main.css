@@ -7,7 +7,7 @@ body {
     font-family: monospace;
     font-size: 14px;
     color: #c8cfd8;
-    background: #292723;
+    background: #343944;
     padding-top: 60px;
     line-height: 1.3em;
     text-align: center;
@@ -27,7 +27,7 @@ b {
     color: #9ACD32;
 }
 .window {
-    background: #3a3f47;
+    background: #404552;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     border-radius: 5px;
     border: 2px solid #333333;
