@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
         return `${years} yrs ${months} mos`;
     }
 
-    const start = new Date(2022, 6);
+    const start = new Date(2025, 5);
     const now = new Date();
 
     let experienceText = calculateExperience(start, now);
