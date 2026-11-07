@@ -19,8 +19,8 @@ body {
 
 body {
     font-family: "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace;
-    font-size: 13px;
-    line-height: 1.42;
+    font-size: 13.75px;
+    line-height: 1.48;
     color: #e8eaef;
     background: var(--desktop-base);
     overflow: hidden;
@@ -199,10 +199,10 @@ body {
 
     position: fixed;
     left: 50%;
-    top: calc(50% - 26px);
+    top: calc(50% - 24px);
     transform: translate(-50%, -50%);
     width: min(860px, calc(100vw - 48px));
-    height: min(680px, calc(100vh - 160px));
+    height: calc(100vh - 133px);
     display: flex;
     flex-direction: column;
     z-index: 2;
@@ -825,15 +825,15 @@ button:focus-visible {
 
 @media (max-width: 720px) {
     body {
-        font-size: 12.5px;
+        font-size: 13px;
     }
 
     .window:not(.is-small) {
         left: 8px !important;
-        top: 38px !important;
+        top: 36px !important;
         transform: none !important;
         width: calc(100vw - 16px);
-        height: calc(100vh - 124px);
+        height: calc(100vh - 128px);
     }
 
     .ps1-full {
