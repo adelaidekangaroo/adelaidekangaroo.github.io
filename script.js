@@ -397,6 +397,8 @@ document.addEventListener("DOMContentLoaded", function () {
             term.classList.add("is-dragged");
             term.style.left = left + "px";
             term.style.top = top + "px";
+            term.style.right = "auto";
+            term.style.margin = "0";
             term.style.transform = "none";
         });
 
