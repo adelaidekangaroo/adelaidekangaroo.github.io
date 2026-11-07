@@ -437,7 +437,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 e.stopPropagation();
                 const rect = term.getBoundingClientRect();
                 term.classList.add("is-resized");
-                term.classList.remove("is-small");
+                term.classList.remove("is-small", "is-max");
                 pinWindow(rect);
                 resize = {
                     edge: handle.dataset.edge,
@@ -559,10 +559,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function toggleZoom() {
         if (term.classList.contains("is-min") || term.classList.contains("is-closed")) return;
-        term.classList.toggle("is-small");
-        if (term.classList.contains("is-small")) {
-            term.style.width = "";
-            term.style.height = "";
+        term.style.left = "";
+        term.style.top = "";
+        term.style.right = "";
+        term.style.margin = "";
+        term.style.width = "";
+        term.style.height = "";
+        term.style.transform = "";
+        if (term.classList.contains("is-max")) {
+            term.classList.remove("is-max");
+            term.classList.add("is-small");
+        } else if (term.classList.contains("is-small")) {
+            term.classList.remove("is-small");
+        } else {
+            term.classList.add("is-max");
         }
     }
 

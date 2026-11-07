@@ -365,6 +365,15 @@ body {
     height: min(260px, calc(100vh - 160px));
 }
 
+.window.is-max {
+    left: 8px;
+    right: auto;
+    top: 36px;
+    margin: 0;
+    width: calc(100vw - 16px);
+    height: calc(100vh - 120px);
+}
+
 .window.is-min {
     height: 44px !important;
 }
@@ -513,7 +522,15 @@ body {
     opacity: 1;
 }
 
-.tl.zoom .glyph-out {
+.tl.zoom .glyph-in {
+    display: none;
+}
+
+.window.is-max .tl.zoom .glyph-in {
+    display: block;
+}
+
+.window.is-max .tl.zoom .glyph-out {
     display: none;
 }
 
