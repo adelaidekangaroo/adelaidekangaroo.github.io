@@ -203,7 +203,7 @@ body {
     top: 42px;
     margin-inline: auto;
     width: min(860px, calc(100vw - 48px));
-    height: calc(100vh - 133px);
+    height: calc(100vh - 126px);
     display: flex;
     flex-direction: column;
     z-index: 2;
@@ -851,8 +851,8 @@ button:focus-visible {
         margin: 0 !important;
         transform: none !important;
         width: calc(100vw - 16px);
-        height: calc(100vh - 148px);
-        height: calc(100dvh - 148px - env(safe-area-inset-bottom, 0px));
+        height: calc(100vh - 119px);
+        height: calc(100dvh - 119px - env(safe-area-inset-bottom, 0px));
     }
 
     .dock {
