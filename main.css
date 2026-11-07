@@ -375,6 +375,56 @@ body {
     pointer-events: none;
 }
 
+.window.is-resized {
+    transition: none;
+}
+
+.resize {
+    position: absolute;
+    z-index: 6;
+    touch-action: none;
+}
+
+.resize[data-edge="n"],
+.resize[data-edge="s"] {
+    left: 14px;
+    right: 14px;
+    height: 6px;
+    cursor: ns-resize;
+}
+
+.resize[data-edge="n"] { top: 0; }
+.resize[data-edge="s"] { bottom: 0; }
+
+.resize[data-edge="e"],
+.resize[data-edge="w"] {
+    top: 14px;
+    bottom: 14px;
+    width: 6px;
+    cursor: ew-resize;
+}
+
+.resize[data-edge="e"] { right: 0; }
+.resize[data-edge="w"] { left: 0; }
+
+.resize[data-edge="nw"],
+.resize[data-edge="ne"],
+.resize[data-edge="sw"],
+.resize[data-edge="se"] {
+    width: 14px;
+    height: 14px;
+}
+
+.resize[data-edge="nw"] { top: 0; left: 0; cursor: nwse-resize; }
+.resize[data-edge="ne"] { top: 0; right: 0; cursor: nesw-resize; }
+.resize[data-edge="sw"] { bottom: 0; left: 0; cursor: nesw-resize; }
+.resize[data-edge="se"] { bottom: 0; right: 0; cursor: nwse-resize; }
+
+.window.is-min .resize,
+.window.is-closed .resize {
+    display: none;
+}
+
 .window-body {
     position: relative;
     z-index: 1;
@@ -859,6 +909,10 @@ button:focus-visible {
         bottom: calc(12px + env(safe-area-inset-bottom, 0px));
     }
 
+    .resize {
+        display: none;
+    }
+
     .ps1-full {
         display: none;
     }
@@ -894,6 +948,7 @@ button:focus-visible {
     .dock,
     .titlebar,
     .shell,
+    .resize,
     .login,
     .hint,
     .shell-log {

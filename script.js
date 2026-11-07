@@ -374,6 +374,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function initWindow() {
         let drag = null;
+        let resize = null;
         let moved = false;
 
         titlebar.addEventListener("pointerdown", function (e) {
@@ -408,6 +409,38 @@ document.addEventListener("DOMContentLoaded", function () {
         titlebar.addEventListener("pointerup", endDrag);
         titlebar.addEventListener("pointercancel", endDrag);
 
+        term.querySelectorAll(".resize").forEach(function (handle) {
+            handle.addEventListener("pointerdown", function (e) {
+                if (e.button !== 0) return;
+                if (term.classList.contains("is-closed") || term.classList.contains("is-min")) return;
+                if (window.matchMedia("(max-width: 720px)").matches) return;
+                e.preventDefault();
+                e.stopPropagation();
+                const rect = term.getBoundingClientRect();
+                term.classList.add("is-resized");
+                term.classList.remove("is-small");
+                pinWindow(rect);
+                resize = {
+                    edge: handle.dataset.edge,
+                    x: e.clientX,
+                    y: e.clientY,
+                    left: rect.left,
+                    top: rect.top,
+                    width: rect.width,
+                    height: rect.height
+                };
+                handle.setPointerCapture(e.pointerId);
+                document.body.style.cursor = handle.style.cursor || getComputedStyle(handle).cursor;
+            });
+        });
+
+        document.addEventListener("pointermove", function (e) {
+            if (!resize) return;
+            applyResize(e.clientX, e.clientY);
+        });
+        document.addEventListener("pointerup", endResize);
+        document.addEventListener("pointercancel", endResize);
+
         titlebar.addEventListener("dblclick", function (e) {
             if (e.target.closest("button")) return;
             if (moved) return;
@@ -426,6 +459,77 @@ document.addEventListener("DOMContentLoaded", function () {
                 input.focus();
             }
         });
+
+        function pinWindow(rect) {
+            term.style.left = rect.left + "px";
+            term.style.top = rect.top + "px";
+            term.style.right = "auto";
+            term.style.margin = "0";
+            term.style.transform = "none";
+            term.style.width = rect.width + "px";
+            term.style.height = rect.height + "px";
+        }
+
+        function applyResize(clientX, clientY) {
+            const dx = clientX - resize.x;
+            const dy = clientY - resize.y;
+            const edge = resize.edge;
+            const minW = 320;
+            const minH = 180;
+            const minL = 8;
+            const minT = 36;
+            const maxR = window.innerWidth - 8;
+            const maxB = window.innerHeight - 78;
+            let left = resize.left;
+            let top = resize.top;
+            let width = resize.width;
+            let height = resize.height;
+            if (edge.indexOf("e") !== -1) width = resize.width + dx;
+            if (edge.indexOf("s") !== -1) height = resize.height + dy;
+            if (edge.indexOf("w") !== -1) {
+                width = resize.width - dx;
+                left = resize.left + dx;
+            }
+            if (edge.indexOf("n") !== -1) {
+                height = resize.height - dy;
+                top = resize.top + dy;
+            }
+            if (width < minW) {
+                if (edge.indexOf("w") !== -1) left -= minW - width;
+                width = minW;
+            }
+            if (height < minH) {
+                if (edge.indexOf("n") !== -1) top -= minH - height;
+                height = minH;
+            }
+            if (left < minL) {
+                width -= minL - left;
+                left = minL;
+            }
+            if (top < minT) {
+                height -= minT - top;
+                top = minT;
+            }
+            if (left + width > maxR) {
+                if (edge.indexOf("w") !== -1) left -= left + width - maxR;
+                else width = maxR - left;
+            }
+            if (top + height > maxB) {
+                if (edge.indexOf("n") !== -1) top -= top + height - maxB;
+                else height = maxB - top;
+            }
+            term.style.left = Math.round(left) + "px";
+            term.style.top = Math.round(top) + "px";
+            term.style.width = Math.round(Math.max(minW, width)) + "px";
+            term.style.height = Math.round(Math.max(minH, height)) + "px";
+        }
+
+        function endResize() {
+            if (!resize) return;
+            resize = null;
+            term.classList.remove("is-resized");
+            document.body.style.cursor = "";
+        }
     }
 
     function bounceDock() {
@@ -437,6 +541,10 @@ document.addEventListener("DOMContentLoaded", function () {
     function toggleZoom() {
         if (term.classList.contains("is-min") || term.classList.contains("is-closed")) return;
         term.classList.toggle("is-small");
+        if (term.classList.contains("is-small")) {
+            term.style.width = "";
+            term.style.height = "";
+        }
     }
 
     function minimizeWindow() {
