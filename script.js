@@ -229,6 +229,26 @@ document.addEventListener("DOMContentLoaded", function () {
         return list;
     }
 
+    const ICONS = {
+        "fa-telegram": "M9.04 15.3 8.7 19.6c.46 0 .66-.2.9-.44l2.16-2.07 4.48 3.29c.82.45 1.4.21 1.62-.76l2.94-13.84h.01c.26-1.22-.44-1.7-1.24-1.4L2.3 10.1c-1.18.46-1.16 1.12-.2 1.42l4.6 1.43L17.38 6.2c.5-.32.96-.14.58.18",
+        "fa-linkedin": "M4.98 3.5A2.5 2.5 0 1 1 2.5 1a2.5 2.5 0 0 1 2.48 2.5zM.5 8.5h4V24h-4V8.5zM8.5 8.5h3.8v2.1h.06c.53-1 1.84-2.1 3.78-2.1 4.06 0 4.81 2.67 4.81 6.14V24h-4v-7.7c0-1.84-.03-4.2-2.56-4.2-2.56 0-2.95 2-2.95 4.06V24h-4V8.5z",
+        "fa-envelope": "M1.5 4.5h21v15h-21v-15zm1.7 1.6 8.8 6.4 8.8-6.4H3.2zm17.1 11.8V8.2l-8.3 6-8.3-6v9.7h16.6z",
+        "fa-github": "M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.1-.8.1-.8.1-.8 1.2.1 1.9 1.3 1.9 1.3 1.1 1.9 2.9 1.3 3.6 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3z"
+    };
+
+    function contactIcon(names) {
+        const key = names.split(/\s+/).filter(function (name) { return ICONS[name]; })[0];
+        if (!key) return null;
+        const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+        svg.setAttribute("viewBox", "0 0 24 24");
+        svg.setAttribute("aria-hidden", "true");
+        svg.classList.add("contact-icon");
+        const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+        path.setAttribute("d", ICONS[key]);
+        svg.append(path);
+        return svg;
+    }
+
     function appendRich(parent, node) {
         if (node == null) return;
         if (typeof node === "string") {
@@ -240,9 +260,8 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
         if (node.icon) {
-            const icon = document.createElement("i");
-            node.icon.split(/\s+/).forEach(function (name) { icon.classList.add(name); });
-            parent.append(icon, " ");
+            const icon = contactIcon(node.icon);
+            if (icon) parent.append(icon, " ");
         }
         if (node.totalExperience) {
             const text = totalExperienceText;

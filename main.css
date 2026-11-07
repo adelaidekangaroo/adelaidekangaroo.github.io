@@ -633,6 +633,14 @@ a {
     text-underline-offset: 3px;
 }
 
+.contact-icon {
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    vertical-align: -0.15em;
+    fill: currentColor;
+}
+
 a:hover {
     color: var(--cyan);
 }
