@@ -61,7 +61,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 renderCv(data);
                 initNav();
                 initShell();
-                input.focus();
                 const hash = location.hash.slice(1);
                 if (sectionIds.includes(hash)) reveal(hash);
             })
@@ -71,7 +70,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 note.textContent = "не удалось прочитать cv.json";
                 document.getElementById("cv").append(note);
                 initShell();
-                input.focus();
             });
     }
 
@@ -329,7 +327,6 @@ document.addEventListener("DOMContentLoaded", function () {
             } else if (item.dataset.cmd) {
                 run(item.dataset.cmd);
             }
-            input.focus();
         });
         document.addEventListener("click", function () {
             setMenu(false);
@@ -474,8 +471,6 @@ document.addEventListener("DOMContentLoaded", function () {
             bounceDock();
             if (term.classList.contains("is-min") || term.classList.contains("is-closed")) {
                 showWindow();
-            } else {
-                input.focus();
             }
         });
 
@@ -595,7 +590,6 @@ document.addEventListener("DOMContentLoaded", function () {
     function showWindow() {
         term.classList.remove("is-min", "is-closed");
         dock.classList.remove("is-off");
-        input.focus();
     }
 
     function initNav() {
@@ -709,11 +703,25 @@ document.addEventListener("DOMContentLoaded", function () {
         document.addEventListener("keydown", function (e) {
             if (e.target === input) return;
             if (e.metaKey || e.ctrlKey || e.altKey) return;
+            if (e.target.closest("input, textarea, button, a, select")) return;
             if ((term.classList.contains("is-min") || term.classList.contains("is-closed")) && e.key.length === 1) {
                 showWindow();
             }
-            if (e.key.length === 1 && !e.target.closest("input, textarea, button")) {
-                input.focus();
+            if (e.key === "Enter") {
+                e.preventDefault();
+                shell.requestSubmit();
+                return;
+            }
+            if (e.key === "Backspace") {
+                e.preventDefault();
+                if (caretIndex > 0) {
+                    input.value = input.value.slice(0, caretIndex - 1) + input.value.slice(caretIndex);
+                    caretIndex -= 1;
+                    syncCaret();
+                }
+                return;
+            }
+            if (e.key.length === 1) {
                 input.value += e.key;
                 caretIndex = input.value.length;
                 syncCaret();
@@ -721,12 +729,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
-        screen.addEventListener("mouseup", function (e) {
-            if (e.target.closest("a, button")) return;
-            const sel = window.getSelection();
-            if (sel && !sel.isCollapsed) return;
-            input.focus();
-        });
     }
 
     function travel(dir) {
